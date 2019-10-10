@@ -1,6 +1,7 @@
-FROM nodejs:8.0
+FROM nodejscn/node:latest
 
 WORKDIR /sample
-COPY ../node-js-sample/ /sample/
+COPY ./* /sample/
+#RUN apt -y install npm
 RUN npm install
 CMD npm start
